@@ -31,22 +31,22 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabMode = new System.Windows.Forms.TabControl();
-            this.loadFileDlg = new System.Windows.Forms.TabPage();
-            this.saveFileDlg = new System.Windows.Forms.TabPage();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.txtLoadFile = new System.Windows.Forms.TextBox();
-            this.txtLoadText = new System.Windows.Forms.TextBox();
-            this.btnLoadFileSelect = new System.Windows.Forms.Button();
+            this.tpRead = new System.Windows.Forms.TabPage();
             this.btnLoadFile = new System.Windows.Forms.Button();
-            this.txtSaveFile = new System.Windows.Forms.TextBox();
-            this.btnSaveFileSelect = new System.Windows.Forms.Button();
-            this.btnSaveFile = new System.Windows.Forms.Button();
+            this.btnLoadFileSelect = new System.Windows.Forms.Button();
+            this.txtLoadText = new System.Windows.Forms.TextBox();
+            this.txtLoadFile = new System.Windows.Forms.TextBox();
+            this.tpWrite = new System.Windows.Forms.TabPage();
             this.txtSaveText = new System.Windows.Forms.TextBox();
+            this.btnSaveFile = new System.Windows.Forms.Button();
+            this.btnSaveFileSelect = new System.Windows.Forms.Button();
+            this.txtSaveFile = new System.Windows.Forms.TextBox();
+            this.loadFileDlg = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1.SuspendLayout();
             this.tabMode.SuspendLayout();
-            this.loadFileDlg.SuspendLayout();
-            this.saveFileDlg.SuspendLayout();
+            this.tpRead.SuspendLayout();
+            this.tpWrite.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -67,8 +67,8 @@
             // 
             // tabMode
             // 
-            this.tabMode.Controls.Add(this.loadFileDlg);
-            this.tabMode.Controls.Add(this.saveFileDlg);
+            this.tabMode.Controls.Add(this.tpRead);
+            this.tabMode.Controls.Add(this.tpWrite);
             this.tabMode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMode.Location = new System.Drawing.Point(0, 0);
             this.tabMode.Name = "tabMode";
@@ -76,50 +76,37 @@
             this.tabMode.Size = new System.Drawing.Size(485, 319);
             this.tabMode.TabIndex = 1;
             // 
-            // loadFileDlg
+            // tpRead
             // 
-            this.loadFileDlg.Controls.Add(this.btnLoadFile);
-            this.loadFileDlg.Controls.Add(this.btnLoadFileSelect);
-            this.loadFileDlg.Controls.Add(this.txtLoadText);
-            this.loadFileDlg.Controls.Add(this.txtLoadFile);
-            this.loadFileDlg.Location = new System.Drawing.Point(4, 22);
-            this.loadFileDlg.Name = "loadFileDlg";
-            this.loadFileDlg.Padding = new System.Windows.Forms.Padding(3);
-            this.loadFileDlg.Size = new System.Drawing.Size(477, 293);
-            this.loadFileDlg.TabIndex = 0;
-            this.loadFileDlg.Text = "파일 읽기";
-            this.loadFileDlg.UseVisualStyleBackColor = true;
+            this.tpRead.Controls.Add(this.btnLoadFile);
+            this.tpRead.Controls.Add(this.btnLoadFileSelect);
+            this.tpRead.Controls.Add(this.txtLoadText);
+            this.tpRead.Controls.Add(this.txtLoadFile);
+            this.tpRead.Location = new System.Drawing.Point(4, 22);
+            this.tpRead.Name = "tpRead";
+            this.tpRead.Padding = new System.Windows.Forms.Padding(3);
+            this.tpRead.Size = new System.Drawing.Size(477, 293);
+            this.tpRead.TabIndex = 0;
+            this.tpRead.Text = "파일 읽기";
+            this.tpRead.UseVisualStyleBackColor = true;
             // 
-            // saveFileDlg
+            // btnLoadFile
             // 
-            this.saveFileDlg.Controls.Add(this.txtSaveText);
-            this.saveFileDlg.Controls.Add(this.btnSaveFile);
-            this.saveFileDlg.Controls.Add(this.btnSaveFileSelect);
-            this.saveFileDlg.Controls.Add(this.txtSaveFile);
-            this.saveFileDlg.Location = new System.Drawing.Point(4, 22);
-            this.saveFileDlg.Name = "saveFileDlg";
-            this.saveFileDlg.Padding = new System.Windows.Forms.Padding(3);
-            this.saveFileDlg.Size = new System.Drawing.Size(477, 293);
-            this.saveFileDlg.TabIndex = 1;
-            this.saveFileDlg.Text = "파일 쓰기";
-            this.saveFileDlg.UseVisualStyleBackColor = true;
+            this.btnLoadFile.Location = new System.Drawing.Point(394, 8);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadFile.TabIndex = 3;
+            this.btnLoadFile.Text = "불러오기";
+            this.btnLoadFile.UseVisualStyleBackColor = true;
             // 
-            // openFileDialog1
+            // btnLoadFileSelect
             // 
-            this.openFileDialog1.FileName = "openFileDlg";
-            this.openFileDialog1.Filter = "텍스트 파일(*.txt)|*.txt|모든파일 (*.*)|*.*";
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.Filter = "텍스트 파일(*.txt)|*.txt";
-            // 
-            // txtLoadFile
-            // 
-            this.txtLoadFile.Location = new System.Drawing.Point(8, 8);
-            this.txtLoadFile.Name = "txtLoadFile";
-            this.txtLoadFile.ReadOnly = true;
-            this.txtLoadFile.Size = new System.Drawing.Size(299, 21);
-            this.txtLoadFile.TabIndex = 0;
+            this.btnLoadFileSelect.Location = new System.Drawing.Point(313, 8);
+            this.btnLoadFileSelect.Name = "btnLoadFileSelect";
+            this.btnLoadFileSelect.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadFileSelect.TabIndex = 2;
+            this.btnLoadFileSelect.Text = "파일 선택";
+            this.btnLoadFileSelect.UseVisualStyleBackColor = true;
             // 
             // txtLoadText
             // 
@@ -131,40 +118,36 @@
             this.txtLoadText.Size = new System.Drawing.Size(461, 252);
             this.txtLoadText.TabIndex = 1;
             // 
-            // btnLoadFileSelect
+            // txtLoadFile
             // 
-            this.btnLoadFileSelect.Location = new System.Drawing.Point(313, 8);
-            this.btnLoadFileSelect.Name = "btnLoadFileSelect";
-            this.btnLoadFileSelect.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadFileSelect.TabIndex = 2;
-            this.btnLoadFileSelect.Text = "파일 선택";
-            this.btnLoadFileSelect.UseVisualStyleBackColor = true;
+            this.txtLoadFile.Location = new System.Drawing.Point(8, 8);
+            this.txtLoadFile.Name = "txtLoadFile";
+            this.txtLoadFile.ReadOnly = true;
+            this.txtLoadFile.Size = new System.Drawing.Size(299, 21);
+            this.txtLoadFile.TabIndex = 0;
             // 
-            // btnLoadFile
+            // tpWrite
             // 
-            this.btnLoadFile.Location = new System.Drawing.Point(394, 8);
-            this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadFile.TabIndex = 3;
-            this.btnLoadFile.Text = "불러오기";
-            this.btnLoadFile.UseVisualStyleBackColor = true;
+            this.tpWrite.Controls.Add(this.txtSaveText);
+            this.tpWrite.Controls.Add(this.btnSaveFile);
+            this.tpWrite.Controls.Add(this.btnSaveFileSelect);
+            this.tpWrite.Controls.Add(this.txtSaveFile);
+            this.tpWrite.Location = new System.Drawing.Point(4, 22);
+            this.tpWrite.Name = "tpWrite";
+            this.tpWrite.Padding = new System.Windows.Forms.Padding(3);
+            this.tpWrite.Size = new System.Drawing.Size(477, 293);
+            this.tpWrite.TabIndex = 1;
+            this.tpWrite.Text = "파일 쓰기";
+            this.tpWrite.UseVisualStyleBackColor = true;
             // 
-            // txtSaveFile
+            // txtSaveText
             // 
-            this.txtSaveFile.Location = new System.Drawing.Point(8, 8);
-            this.txtSaveFile.Name = "txtSaveFile";
-            this.txtSaveFile.ReadOnly = true;
-            this.txtSaveFile.Size = new System.Drawing.Size(303, 21);
-            this.txtSaveFile.TabIndex = 0;
-            // 
-            // btnSaveFileSelect
-            // 
-            this.btnSaveFileSelect.Location = new System.Drawing.Point(317, 6);
-            this.btnSaveFileSelect.Name = "btnSaveFileSelect";
-            this.btnSaveFileSelect.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveFileSelect.TabIndex = 1;
-            this.btnSaveFileSelect.Text = "파일 선택";
-            this.btnSaveFileSelect.UseVisualStyleBackColor = true;
+            this.txtSaveText.Location = new System.Drawing.Point(9, 36);
+            this.txtSaveText.Multiline = true;
+            this.txtSaveText.Name = "txtSaveText";
+            this.txtSaveText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtSaveText.Size = new System.Drawing.Size(460, 251);
+            this.txtSaveText.TabIndex = 3;
             // 
             // btnSaveFile
             // 
@@ -175,14 +158,31 @@
             this.btnSaveFile.Text = "저장하기";
             this.btnSaveFile.UseVisualStyleBackColor = true;
             // 
-            // txtSaveText
+            // btnSaveFileSelect
             // 
-            this.txtSaveText.Location = new System.Drawing.Point(9, 36);
-            this.txtSaveText.Multiline = true;
-            this.txtSaveText.Name = "txtSaveText";
-            this.txtSaveText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtSaveText.Size = new System.Drawing.Size(460, 251);
-            this.txtSaveText.TabIndex = 3;
+            this.btnSaveFileSelect.Location = new System.Drawing.Point(317, 6);
+            this.btnSaveFileSelect.Name = "btnSaveFileSelect";
+            this.btnSaveFileSelect.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveFileSelect.TabIndex = 1;
+            this.btnSaveFileSelect.Text = "파일 선택";
+            this.btnSaveFileSelect.UseVisualStyleBackColor = true;
+            // 
+            // txtSaveFile
+            // 
+            this.txtSaveFile.Location = new System.Drawing.Point(8, 8);
+            this.txtSaveFile.Name = "txtSaveFile";
+            this.txtSaveFile.ReadOnly = true;
+            this.txtSaveFile.Size = new System.Drawing.Size(303, 21);
+            this.txtSaveFile.TabIndex = 0;
+            // 
+            // loadFileDlg
+            // 
+            this.loadFileDlg.FileName = "loadFileDlg";
+            this.loadFileDlg.Filter = "텍스트 파일(*.txt)|*.txt|모든파일 (*.*)|*.*";
+            // 
+            // saveFileDlg
+            // 
+            this.saveFileDlg.Filter = "텍스트 파일(*.txt)|*.txt";
             // 
             // FormMemo
             // 
@@ -199,10 +199,10 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tabMode.ResumeLayout(false);
-            this.loadFileDlg.ResumeLayout(false);
-            this.loadFileDlg.PerformLayout();
-            this.saveFileDlg.ResumeLayout(false);
-            this.saveFileDlg.PerformLayout();
+            this.tpRead.ResumeLayout(false);
+            this.tpRead.PerformLayout();
+            this.tpWrite.ResumeLayout(false);
+            this.tpWrite.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,17 +213,17 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel Status;
         private System.Windows.Forms.TabControl tabMode;
-        private System.Windows.Forms.TabPage loadFileDlg;
+        private System.Windows.Forms.TabPage tpRead;
         private System.Windows.Forms.Button btnLoadFile;
         private System.Windows.Forms.Button btnLoadFileSelect;
         private System.Windows.Forms.TextBox txtLoadText;
         private System.Windows.Forms.TextBox txtLoadFile;
-        private System.Windows.Forms.TabPage saveFileDlg;
+        private System.Windows.Forms.TabPage tpWrite;
         private System.Windows.Forms.TextBox txtSaveText;
         private System.Windows.Forms.Button btnSaveFile;
         private System.Windows.Forms.Button btnSaveFileSelect;
         private System.Windows.Forms.TextBox txtSaveFile;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog loadFileDlg;
+        private System.Windows.Forms.SaveFileDialog saveFileDlg;
     }
 }

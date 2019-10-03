@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace BeautyForestAgent
 {
@@ -21,5 +22,6 @@ namespace BeautyForestAgent
             MessageBox.Show("건의사항이 보내졌습니다.", "건의사항 발송");
             this.Close();
         }
+
     }
 }
